@@ -170,46 +170,40 @@ with placeholder.container():
 
         # fill in those three columns with respective metrics or KPIs
         kpi1.metric(
-            label="Rohit ⏳",
-            value=entryfee_left
-            # delta=df['Rohit']) - 10,
-        )
-        
-        kpi2.metric(
-            label="Mayur ⏳",
-            value=entryfee_left
-            # delta=df['Rohit']) - 10,
-        )
-        
-        kpi3.metric(
-            label="Akshay ⏳",
-            value=entryfee_left
-            # delta=df['Rohit']) - 10,
-        )
+        label="Rohit ⏳",
+        value=df['Rohit'][0]
+        # delta=df['Rohit']) - 10,
+    )
+    
+    kpi2.metric(
+        label="Ajinkya ⏳",
+        value= 0 #df['Ajinkya'][0]
+        # delta=df['Rohit']) - 10,
+    )
+    
+    kpi3.metric(
+        label="Aditya ⏳",
+        value=df['Aditya'][0]
+        # delta=df['Rohit']) - 10,
+    )
 
-        kpi4.metric(
-            label="Kaustubh ⏳",
-            value=entryfee_left
-            # delta=df['Rohit']) - 10,
-        )
+    kpi4.metric(
+        label="Kaustubh ⏳",
+        value=df['Kaustubh'][0]
+        # delta=df['Rohit']) - 10,
+    )
 
-        kpi5.metric(
-            label="Chaitanya ⏳",
-            value=entryfee_left
-            # delta=df['Rohit']) - 10,
-        )
+    kpi5.metric(
+        label="Chaitanya ⏳",
+        value=df['Chaitanya'][0]
+        # delta=df['Rohit']) - 10,
+    )
 
-        kpi6.metric(
-            label="Kshtij ⏳",
-            value=entryfee_left
-            # delta=df['Rohit']) - 10,
-        )
-
-        kpi7.metric(
-            label="Chintu ⏳",
-            value=entryfee_left
-            # delta=df['Rohit']) - 10,
-        )
+    kpi6.metric(
+        label="Sumit ⏳",
+        value=df['Sumit'][0]
+        # delta=df['Rohit']) - 10,
+    )
     st.markdown("### Detailed Data View")
     st.dataframe(df)
     time.sleep(1)
