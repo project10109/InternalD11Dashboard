@@ -203,7 +203,7 @@ with placeholder.container():
 
     kpi6.metric(
         label="Sumit ⏳",
-        value=-60
+        value=entryfee_left
         # delta=df['Rohit']) - 10,
     )
 st.markdown("### Detailed Data View")
