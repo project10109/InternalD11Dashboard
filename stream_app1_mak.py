@@ -179,7 +179,7 @@ with placeholder.container():
     
     kpi2.metric(
         label="Ajinkya ⏳",
-        value= 99 #df['Ajinkya'][0]
+        value= 0 #df['Ajinkya'][0]
         # delta=df['Rohit']) - 10,
     )
     
