@@ -8,7 +8,7 @@ from streamlit_option_menu import option_menu
 
 
 st.set_page_config(
-    page_title="Internal Potte Dream11 IPL Winnings Dashboard",
+    page_title="Mak Potte Dream11 IPL Winnings Dashboard",
     page_icon="✅",
     layout="wide",
 )
@@ -40,6 +40,7 @@ def get_data() -> pd.DataFrame:
 
 
 df = get_data()
+# print(df)
 # df=df.fillna(method='ffill')
     # df['Rohit']=df['Rohit'].astype('int')
     # df['Mayur']=df['Mayur'].astype('int')
@@ -52,7 +53,7 @@ df = get_data()
 print(df.dtypes)
 
 # dashboard title
-st.title("Internal Potte Dream11 IPL Winnings Dashboard")
+st.title("Mak Potte Dream11 IPL Winnings Dashboard")
 
 # top-level filters
 #job_filter = st.selectbox("Select the Job", pd.unique(df["job"]))
@@ -161,23 +162,24 @@ with placeholder.container():
 
 
 
-    with placeholder.container():
-        entryfee=1200
-        matches_over=len(df.dropna())
-        entryfee_left=1200-(matches_over*60)
-        # create three columns
-        kpi1, kpi2, kpi3 ,kpi4,kpi5,kpi6 ,kpi7 = st.columns(7)
+with placeholder.container():
+    entryfee=1200
+    matches_over=len(df.dropna())
+    entryfee_left=1200-(matches_over*60)
+    print('entryfee_left',entryfee_left)
+    # create three columns
+    kpi1, kpi2, kpi3 ,kpi4,kpi5,kpi6 = st.columns(6)
 
-        # fill in those three columns with respective metrics or KPIs
-        kpi1.metric(
+    # fill in those three columns with respective metrics or KPIs
+    kpi1.metric(
         label="Rohit ⏳",
         value=df['Rohit'][0]
-        # delta=df['Rohit']) - 10,
+    # delta=df['Rohit']) - 10,
     )
     
     kpi2.metric(
         label="Ajinkya ⏳",
-        value= 0 #df['Ajinkya'][0]
+        value= 99 #df['Ajinkya'][0]
         # delta=df['Rohit']) - 10,
     )
     
@@ -204,8 +206,8 @@ with placeholder.container():
         value=df['Sumit'][0]
         # delta=df['Rohit']) - 10,
     )
-    st.markdown("### Detailed Data View")
-    st.dataframe(df)
-    time.sleep(1)
+st.markdown("### Detailed Data View")
+st.dataframe(df)
+time.sleep(1)
 
 
