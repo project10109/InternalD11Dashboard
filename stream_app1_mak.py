@@ -40,7 +40,7 @@ def get_data() -> pd.DataFrame:
 
 
 df = get_data()
-# print(df)
+print(df)
 # df=df.fillna(method='ffill')
     # df['Rohit']=df['Rohit'].astype('int')
     # df['Mayur']=df['Mayur'].astype('int')
