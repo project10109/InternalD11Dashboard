@@ -40,7 +40,7 @@ def get_data() -> pd.DataFrame:
 
 
 df = get_data()
-print(df)
+# print(df)
 # df=df.fillna(method='ffill')
     # df['Rohit']=df['Rohit'].astype('int')
     # df['Mayur']=df['Mayur'].astype('int')
@@ -173,7 +173,7 @@ with placeholder.container():
     # fill in those three columns with respective metrics or KPIs
     kpi1.metric(
         label="Rohit ⏳",
-        value=df['Rohit'][0]
+        value=entryfee_left
     # delta=df['Rohit']) - 10,
     )
     
@@ -185,25 +185,25 @@ with placeholder.container():
     
     kpi3.metric(
         label="Aditya ⏳",
-        value=df['Aditya'][0]
+        value=entryfee_left
         # delta=df['Rohit']) - 10,
     )
 
     kpi4.metric(
         label="Kaustubh ⏳",
-        value=df['Kaustubh'][0]
+        value=entryfee_left
         # delta=df['Rohit']) - 10,
     )
 
     kpi5.metric(
         label="Chaitanya ⏳",
-        value=df['Chaitanya'][0]
+        value=entryfee_left
         # delta=df['Rohit']) - 10,
     )
 
     kpi6.metric(
         label="Sumit ⏳",
-        value=df['Sumit'][0]
+        value=-60
         # delta=df['Rohit']) - 10,
     )
 st.markdown("### Detailed Data View")
