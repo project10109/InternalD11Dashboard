@@ -65,7 +65,7 @@ placeholder = st.empty()
 with placeholder.container():
 
     # create three columns
-    kpi1, kpi2, kpi3 ,kpi4,kpi5,kpi6 ,kpi7 = st.columns(7)
+    kpi1, kpi2, kpi3 ,kpi4,kpi5,kpi6  = st.columns(6)
 
     # fill in those three columns with respective metrics or KPIs
     kpi1.metric(
@@ -98,13 +98,9 @@ with placeholder.container():
         # delta=df['Rohit']) - 10,
     )
 
-    kpi6.metric(
-        label="Kshtij ⏳",
-        value=df['Kshtij'][0]
-        # delta=df['Rohit']) - 10,
-    )
+  
 
-    kpi7.metric(
+    kpi6.metric(
         label="Chintu ⏳",
         value=df['Chintu'][0]
         # delta=df['Rohit']) - 10,
@@ -171,7 +167,7 @@ with placeholder.container():
         matches_over=len(df.dropna())
         entryfee_left=1200-(matches_over*60)
         # create three columns
-        kpi1, kpi2, kpi3 ,kpi4,kpi5,kpi6 ,kpi7 = st.columns(7)
+        kpi1, kpi2, kpi3 ,kpi4,kpi5,kpi6  = st.columns(6)
 
         # fill in those three columns with respective metrics or KPIs
         kpi1.metric(
@@ -188,7 +184,7 @@ with placeholder.container():
         
         kpi3.metric(
             label="Akshay ⏳",
-            value=entryfee_left
+            value=1200+entryfee_left
             # delta=df['Rohit']) - 10,
         )
 
@@ -204,13 +200,9 @@ with placeholder.container():
             # delta=df['Rohit']) - 10,
         )
 
-        kpi6.metric(
-            label="Kshtij ⏳",
-            value=entryfee_left
-            # delta=df['Rohit']) - 10,
-        )
+       
 
-        kpi7.metric(
+        kpi6.metric(
             label="Chintu ⏳",
             value=entryfee_left
             # delta=df['Rohit']) - 10,
