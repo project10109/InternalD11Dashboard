@@ -45,6 +45,7 @@ def get_data() -> pd.DataFrame:
 
 
 df = get_data()
+print('df',df)
 # df=df.fillna(method='ffill')
     # df['Rohit']=df['Rohit'].astype('int')
     # df['Mayur']=df['Mayur'].astype('int')
@@ -64,7 +65,11 @@ st.title("Internal Potte Dream11 IPL Winnings Dashboard")
 
 # creating a single-element container
 placeholder = st.empty()
-
+print('Rohit',df['Rohit'].sum())
+print('Mayur',df['Mayur'].sum())
+print('Akshay',df['Akshay'].sum())
+# print('Rohit',df['Rohit'][0])
+# print('Rohit',df['Rohit'][0])
 
 
 with placeholder.container():
@@ -75,31 +80,31 @@ with placeholder.container():
     # fill in those three columns with respective metrics or KPIs
     kpi1.metric(
         label="Rohit ⏳",
-        value=df['Rohit'][0]
+        value=df['Rohit'].sum()
         # delta=df['Rohit']) - 10,
     )
     
     kpi2.metric(
         label="Mayur ⏳",
-        value=df['Mayur'][0]
+        value=df['Mayur'].sum()
         # delta=df['Rohit']) - 10,
     )
     
     kpi3.metric(
         label="Akshay ⏳",
-        value=df['Akshay'][0]
+        value=df['Akshay'].sum()
         # delta=df['Rohit']) - 10,
     )
 
     kpi4.metric(
         label="Kaustubh ⏳",
-        value=df['Kaustubh'][0]
+        value=df['Kaustubh'].sum()
         # delta=df['Rohit']) - 10,
     )
 
     kpi5.metric(
         label="Chaitanya ⏳",
-        value=df['Chaitanya'][0]
+        value=df['Chaitanya'].sum()
         # delta=df['Rohit']) - 10,
     )
 
@@ -107,7 +112,7 @@ with placeholder.container():
 
     kpi6.metric(
         label="Chintu ⏳",
-        value=df['Chintu'][0]
+        value=df['Chintu'].sum()
         # delta=df['Rohit']) - 10,
     )
 

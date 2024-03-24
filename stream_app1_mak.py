@@ -71,37 +71,37 @@ with placeholder.container():
     # fill in those three columns with respective metrics or KPIs
     kpi1.metric(
         label="Rohit ⏳",
-        value=df['Rohit'][0]
+        value=df['Rohit'].sum()
         # delta=df['Rohit']) - 10,
     )
     
     kpi2.metric(
         label="Ajinkya ⏳",
-        value=df['Ajinkya'][0]
+        value=df['Ajinkya'].sum()
         # delta=df['Rohit']) - 10,
     )
     
     kpi3.metric(
         label="Aditya ⏳",
-        value=df['Aditya'][0]
+        value=df['Aditya'].sum()
         # delta=df['Rohit']) - 10,
     )
 
     kpi4.metric(
         label="Kaustubh ⏳",
-        value=df['Kaustubh'][0]
+        value=df['Kaustubh'].sum()
         # delta=df['Rohit']) - 10,
     )
 
     kpi5.metric(
         label="Chaitanya ⏳",
-        value=df['Chaitanya'][0]
+        value=df['Chaitanya'].sum()
         # delta=df['Rohit']) - 10,
     )
 
     kpi6.metric(
         label="Sumit ⏳",
-        value=df['Sumit'][0]
+        value=df['Sumit'].sum()
         # delta=df['Rohit']) - 10,
     )
 
@@ -179,7 +179,7 @@ with placeholder.container():
     
     kpi2.metric(
         label="Ajinkya ⏳",
-        value= 0 #df['Ajinkya'][0]
+        value= -240 #df['Ajinkya'][0]
         # delta=df['Rohit']) - 10,
     )
     
