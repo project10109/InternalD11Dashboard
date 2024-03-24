@@ -28,14 +28,20 @@ st.set_page_config(
 # print(df)
 
 # read csv from a URL
+# @st.experimental_memo
+# def get_data() -> pd.DataFrame:
+#     import pandas as pd
+#     url ='https://drive.google.com/file/d/1C1Z1r3EGH7JwE98yREz8U8B5gVppXfhM/view?usp=sharing'
+#     file_id = url.split('/')[-2]
+#     dwn_url = 'https://drive.google.com/uc?export=download&id=' + file_id
+#     # df = pd.read_csv(dwn_url)
+#     return pd.read_csv(dwn_url)
+dataset_url='https://raw.githubusercontent.com/project10109/InternalD11Dashboard/main/Winnings_csv_Mak.csv'
+# read csv from a URL
 @st.experimental_memo
 def get_data() -> pd.DataFrame:
-    import pandas as pd
-    url ='https://drive.google.com/file/d/1C1Z1r3EGH7JwE98yREz8U8B5gVppXfhM/view?usp=sharing'
-    file_id = url.split('/')[-2]
-    dwn_url = 'https://drive.google.com/uc?export=download&id=' + file_id
-    # df = pd.read_csv(dwn_url)
-    return pd.read_csv(dwn_url)
+    return pd.read_csv(dataset_url)
+
 
 
 # dashboard title
@@ -51,6 +57,7 @@ placeholder = st.empty()
 st.sidebar.header("Click to get Latest Data")
 if st.sidebar.button("Update Leaderboard"):
     df = get_data()
+    # print('df',df['Ajinkya'].values)
     df['Match'] = df['Team 1'] + ' vs. ' + df['Team 2']
     df=df.drop(['Team 1','Team 2'],axis=1)
 
