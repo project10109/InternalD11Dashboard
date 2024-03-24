@@ -28,15 +28,20 @@ st.set_page_config(
 # print(df)
 
 # read csv from a URL
+# @st.experimental_memo
+# def get_data() -> pd.DataFrame:
+#     import pandas as pd
+#     url ='https://drive.google.com/file/d/1A2rktIR66_EYwwzPs78eLOFqyJohcl--/view?usp=sharing'
+#     file_id = url.split('/')[-2]
+#     dwn_url = 'https://drive.google.com/uc?export=download&id=' + file_id
+#     # df = pd.read_csv(dwn_url)
+#     return pd.read_csv(dwn_url)
+
+dataset_url='https://raw.githubusercontent.com/project10109/InternalD11Dashboard/main/Winnings_csv.csv'
+# read csv from a URL
 @st.experimental_memo
 def get_data() -> pd.DataFrame:
-    import pandas as pd
-    url ='https://drive.google.com/file/d/1A2rktIR66_EYwwzPs78eLOFqyJohcl--/view?usp=sharing'
-    file_id = url.split('/')[-2]
-    dwn_url = 'https://drive.google.com/uc?export=download&id=' + file_id
-    # df = pd.read_csv(dwn_url)
-    return pd.read_csv(dwn_url)
-
+    return pd.read_csv(dataset_url)
 
 
 df = get_data()
@@ -49,7 +54,7 @@ df = get_data()
     # df['Kshtij']=df['Kshtij'].astype('int')
     # df['Chintu']=df['Chintu'].astype('int')
 
-print(df.dtypes)
+print(df)
 
 # dashboard title
 st.title("Internal Potte Dream11 IPL Winnings Dashboard")
