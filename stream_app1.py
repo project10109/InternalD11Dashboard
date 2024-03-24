@@ -44,18 +44,6 @@ def get_data() -> pd.DataFrame:
     return pd.read_csv(dataset_url)
 
 
-df = get_data()
-print('df',df)
-# df=df.fillna(method='ffill')
-    # df['Rohit']=df['Rohit'].astype('int')
-    # df['Mayur']=df['Mayur'].astype('int')
-    # df['Akshay']=df['Akshay'].astype('int')
-    # df['Kaustubh']=df['Kaustubh'].astype('int')
-    # df['Chaitanya']=df['Chaitanya'].astype('int')
-    # df['Kshtij']=df['Kshtij'].astype('int')
-    # df['Chintu']=df['Chintu'].astype('int')
-
-print(df)
 
 # dashboard title
 st.title("Internal Potte Dream11 IPL Winnings Dashboard")
@@ -65,160 +53,153 @@ st.title("Internal Potte Dream11 IPL Winnings Dashboard")
 
 # creating a single-element container
 placeholder = st.empty()
-print('Rohit',df['Rohit'].sum())
-print('Mayur',df['Mayur'].sum())
-print('Akshay',df['Akshay'].sum())
-# print('Rohit',df['Rohit'][0])
-# print('Rohit',df['Rohit'][0])
 
 
-with placeholder.container():
+st.sidebar.header("Click to get Latest Data")
+if st.sidebar.button("Update Leaderboard"):
 
-    # create three columns
-    kpi1, kpi2, kpi3 ,kpi4,kpi5,kpi6  = st.columns(6)
+# if button==True:
+    df = get_data()
+    df['Match'] = df['Team 1'] + ' vs. ' + df['Team 2']
+    df=df.drop(['Team 1','Team 2'],axis=1)
 
-    # fill in those three columns with respective metrics or KPIs
-    kpi1.metric(
-        label="Rohit ⏳",
-        value=df['Rohit'].sum()
-        # delta=df['Rohit']) - 10,
-    )
-    
-    kpi2.metric(
-        label="Mayur ⏳",
-        value=df['Mayur'].sum()
-        # delta=df['Rohit']) - 10,
-    )
-    
-    kpi3.metric(
-        label="Akshay ⏳",
-        value=df['Akshay'].sum()
-        # delta=df['Rohit']) - 10,
-    )
-
-    kpi4.metric(
-        label="Kaustubh ⏳",
-        value=df['Kaustubh'].sum()
-        # delta=df['Rohit']) - 10,
-    )
-
-    kpi5.metric(
-        label="Chaitanya ⏳",
-        value=df['Chaitanya'].sum()
-        # delta=df['Rohit']) - 10,
-    )
-
-  
-
-    kpi6.metric(
-        label="Chintu ⏳",
-        value=df['Chintu'].sum()
-        # delta=df['Rohit']) - 10,
-    )
-
-    # # create two columns for charts
-    # fig_col1, fig_col2 = st.columns(2)
-    # with fig_col1:
-    #     st.markdown("### First Chart")
-    #     fig = px.density_heatmap(
-    #         data_frame=df, y="age_new", x="marital"
-    #     )
-    #     st.write(fig)
-        
-    # with fig_col2:
-    #     st.markdown("### Second Chart")
-    #     fig2 = px.histogram(data_frame=df, x="age_new")
-    #     st.write(fig2)
-
-
-
-    # import streamlit as st
-    # import pandas as pd
-    # import plotly.express as px
-
-    # # Sample data (replace with your actual data if needed)
-    # data = {
-    #     "Rohit": [100.200],
-    #     "Chaddi": [50, 300],
-    #     "Kstya": [180, 400],
-    #     "Gtya": [210, 400]
-    # }
-
-    # df = pd.DataFrame(data)
-
-    # Streamlit app layout
-    # st.title("Line Chart of Money Won by Friends")
-
-    # Create the line chart with Plotly Express
-    # fig = px.line(
-    #     df,
-    #     x=df.columns,  # Use column names as x-axis labels
-    #     y=df.values.flatten(),  # Flatten the DataFrame values for plotting multiple lines
-    #     title="Money Won Over Time ",
-    #     labels={"x": "Friend", "y": "Money Won"}  # Set custom axis labels
-    # # )
-
-
-#    -----------
-    # import plotly.express as px
-
-    # fig = px.line(df)
-
-    # st.plotly_chart(fig, use_container_width=True)
-
-    st.title("Entry Fee Left")
-
-    placeholder = st.empty()
-
-
+    # print(df)
 
     with placeholder.container():
-        entryfee=1200
-        matches_over=len(df.dropna())
-        entryfee_left=1200-(matches_over*60)
+
         # create three columns
         kpi1, kpi2, kpi3 ,kpi4,kpi5,kpi6  = st.columns(6)
 
         # fill in those three columns with respective metrics or KPIs
         kpi1.metric(
             label="Rohit ⏳",
-            value=entryfee_left
+            value=df['Rohit'].sum()
             # delta=df['Rohit']) - 10,
         )
         
         kpi2.metric(
             label="Mayur ⏳",
-            value=entryfee_left
+            value=df['Mayur'].sum()
             # delta=df['Rohit']) - 10,
         )
         
         kpi3.metric(
             label="Akshay ⏳",
-            value=1200+entryfee_left
+            value=df['Akshay'].sum()
             # delta=df['Rohit']) - 10,
         )
 
         kpi4.metric(
             label="Kaustubh ⏳",
-            value=entryfee_left
+            value=df['Kaustubh'].sum()
             # delta=df['Rohit']) - 10,
         )
 
         kpi5.metric(
             label="Chaitanya ⏳",
-            value=entryfee_left
+            value=df['Chaitanya'].sum()
             # delta=df['Rohit']) - 10,
         )
 
-       
+      
 
         kpi6.metric(
             label="Chintu ⏳",
-            value=entryfee_left
+            value=df['Chintu'].sum()
             # delta=df['Rohit']) - 10,
         )
-    st.markdown("### Detailed Data View")
-    st.dataframe(df)
-    time.sleep(1)
+
+        
+
+        st.title("Entry Fee Left")
+
+        placeholder = st.empty()
+
+
+
+        with placeholder.container():
+            entryfee=1200
+            matches_over=len(df.dropna())
+            entryfee_left=1200-(matches_over*60)
+            # create three columns
+            kpi1, kpi2, kpi3 ,kpi4,kpi5,kpi6  = st.columns(6)
+
+            # fill in those three columns with respective metrics or KPIs
+            kpi1.metric(
+                label="Rohit ⏳",
+                value=entryfee_left
+                # delta=df['Rohit']) - 10,
+            )
+            
+            kpi2.metric(
+                label="Mayur ⏳",
+                value=entryfee_left
+                # delta=df['Rohit']) - 10,
+            )
+            
+            kpi3.metric(
+                label="Akshay ⏳",
+                value=1200+entryfee_left
+                # delta=df['Rohit']) - 10,
+            )
+
+            kpi4.metric(
+                label="Kaustubh ⏳",
+                value=entryfee_left
+                # delta=df['Rohit']) - 10,
+            )
+
+            kpi5.metric(
+                label="Chaitanya ⏳",
+                value=entryfee_left
+                # delta=df['Rohit']) - 10,
+            )
+
+           
+
+            kpi6.metric(
+                label="Chintu ⏳",
+                value=entryfee_left
+                # delta=df['Rohit']) - 10,
+            )
+        st.markdown("### Detailed Data View")
+        st.dataframe(df)
+        time.sleep(1)
+
+        # st.title("Line Chart of Money Won by Friends")
+        # import pandas as pd
+        # import plotly.express as px
+
+        # # Create a new dataframe with the sum of values for the specified columns
+        # new_df = df[['Rohit', 'Mayur', 'Akshay', 'Kaustubh', 'Chaitanya', 'Chintu']].sum(axis=0).reset_index(name='Total')
+
+        # # Create a pie plot using Plotly Express
+        # fig = px.pie(new_df, values='Total', names='index')
+
+        # # Show the pie plot
+        # fig.show()
+
+        # df = get_data()
+
+        # Filter the DataFrame to only include the specified columns
+        # filtered_df = df[['Rohit', 'Mayur', 'Akshay', 'Kaustubh', 'Chaitanya', 'Chintu']]
+
+        # # Sum the values for each column
+        # summed_values = filtered_df.sum(axis=0)
+
+        # # Create a pie plot using Plotly Express
+        # fig = px.pie(summed_values, values=summed_values, names=summed_values.index, color_discrete_sequence=px.colors.qualitative.Plotly)
+
+        # # Adjust the size of the plot
+        # fig.update_layout(
+        #     width=500,
+        #     height=400
+        # )
+
+        # # Show the name in the pie
+        # fig.update_traces(textposition='inside', textinfo='label+percent')
+
+        # # Display the pie plot
+        # fig.show()
 
 
