@@ -55,8 +55,8 @@ st.title("Internal Potte Dream11 IPL Winnings Dashboard")
 placeholder = st.empty()
 
 
-st.sidebar.header("Click to get Latest Data")
-if st.sidebar.button("Update Leaderboard"):
+st.header("Click to get Latest Data")
+if st.button("Update Leaderboard"):
 
 # if button==True:
     df = get_data()

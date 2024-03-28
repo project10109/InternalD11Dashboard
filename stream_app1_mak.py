@@ -54,8 +54,8 @@ st.title("Mak Potte Dream11 IPL Winnings Dashboard")
 placeholder = st.empty()
 
 # button = st.button("Summarize")
-st.sidebar.header("Click to get Latest Data")
-if st.sidebar.button("Update Leaderboard"):
+st.header("Click to get Latest Data")
+if st.button("Update Leaderboard"):
     df = get_data()
     # print('df',df['Ajinkya'].values)
     df['Match'] = df['Team 1'] + ' vs. ' + df['Team 2']
