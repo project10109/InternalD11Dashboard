@@ -8,15 +8,15 @@ Match No,Fixture Date,Team 1,Team 2,Rohit,Ajinkya,Aditya,Kaustubh,Chaitanya,Sumi
 7,Mar-26,CSK,GT,0,0,0,0,0,360
 8,Mar-27,SRH,MI,0,360,0,0,0,0
 9,Mar-28,RR,DC,0,0,0,360,0,0
-10,Mar-29,RCB,KKR,,,,,,
-11,Mar-30,LSG,PBKS,,,,,,
-12,Mar-31,GT,SRH,,,,,,
-13,Mar-31,DC,CSK,,,,,,
-14,April 1,MI,RR,,,,,,
-15,April 2,RCB,LSG,,,,,,
-16,April 3,DC,KKR,,,,,,
-17,April 4,GT,PBKS,,,,,,
-18,April 5,SRH,CSK,,,,,,
-19,April 6,RR,RCB,,,,,,
+10,Mar-29,RCB,KKR,0,0,0,0,0,360
+11,Mar-30,LSG,PBKS,360,0,0,0,0,0
+12,Mar-31,GT,SRH,0,0,0,360,0,0
+13,Mar-31,DC,CSK,0,0,0,0,360,0
+14,April 1,MI,RR,0,0,0,0,0,360
+15,April 2,RCB,LSG,0,360,0,0,0,0
+16,April 3,DC,KKR,0,0,360,0,0,0
+17,April 4,GT,PBKS,0,360,0,0,0,0
+18,April 5,SRH,CSK,0,0,0,360,0,0
+19,April 6,RR,RCB,0,0,0,0,0,360
 20,April 7,MI,DC,,,,,,
 21,April 7,LSG,GT,,,,,,
