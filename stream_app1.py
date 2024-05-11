@@ -164,7 +164,7 @@ if st.button("Update Leaderboard"):
             )
 
 
-        st.title("Winnigns Distributed so far")
+        st.title("Winnings Distributed so far")
 
         placeholder = st.empty()
 
