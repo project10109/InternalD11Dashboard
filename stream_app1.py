@@ -118,9 +118,9 @@ if st.button("Update Leaderboard"):
 
 
         with placeholder.container():
-            entryfee=1200
+            entryfee=3600
             matches_over=len(df.dropna())
-            entryfee_left=1200-(matches_over*60)
+            entryfee_left=3600-(matches_over*60)
             # create three columns
             kpi1, kpi2, kpi3 ,kpi4,kpi5,kpi6  = st.columns(6)
 
@@ -159,7 +159,7 @@ if st.button("Update Leaderboard"):
 
             kpi6.metric(
                 label="Chintu ⏳",
-                value=entryfee_left
+                value="NA"
                 # delta=df['Rohit']) - 10,
             )
         st.markdown("### Detailed Data View")
