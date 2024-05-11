@@ -60,7 +60,7 @@ if st.button("Update Leaderboard"):
 
 # if button==True:
     df = get_data()
-    df['Match'] = df['Team 1'] + ' vs. ' + df['Team 2']
+    df['Match'] = df['Home Team'] + ' vs. ' + df['Away Team']
     df=df.drop(['Team 1','Team 2'],axis=1)
 
     # print(df)
