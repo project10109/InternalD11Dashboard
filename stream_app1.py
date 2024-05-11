@@ -162,6 +162,58 @@ if st.button("Update Leaderboard"):
                 value="NA"
                 # delta=df['Rohit']) - 10,
             )
+
+
+        st.title("Winnigns Distributed so far")
+
+        placeholder = st.empty()
+
+
+
+        with placeholder.container():
+            
+            # create three columns
+            kpi1, kpi2, kpi3 ,kpi4,kpi5,kpi6  = st.columns(6)
+
+            # fill in those three columns with respective metrics or KPIs
+            kpi1.metric(
+                label="Rohit ⏳",
+                value=0
+                # delta=df['Rohit']) - 10,
+            )
+            
+            kpi2.metric(
+                label="Mayur ⏳",
+                value=0
+                # delta=df['Rohit']) - 10,
+            )
+            
+            kpi3.metric(
+                label="Akshay ⏳",
+                value=1200
+                # delta=df['Rohit']) - 10,
+            )
+
+            kpi4.metric(
+                label="Kaustubh ⏳",
+                value=0
+                # delta=df['Rohit']) - 10,
+            )
+
+            kpi5.metric(
+                label="Chaitanya ⏳",
+                value=0
+                # delta=df['Rohit']) - 10,
+            )
+
+           
+
+            kpi6.metric(
+                label="Chintu ⏳",
+                value=0
+                # delta=df['Rohit']) - 10,
+            )
+        
         st.markdown("### Detailed Data View")
         st.dataframe(df)
         time.sleep(1)
