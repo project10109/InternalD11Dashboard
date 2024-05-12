@@ -240,7 +240,7 @@ if st.button("Update Leaderboard"):
             
             kpi3.metric(
                 label="Akshay ⏳",
-                value=df['Akshay'].sum()
+                value=df['Akshay'].sum()-1200
                 # delta=df['Rohit']) - 10,
             )
 
