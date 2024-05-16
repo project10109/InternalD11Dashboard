@@ -260,7 +260,7 @@ if st.button("Update Leaderboard"):
 
             kpi6.metric(
                 label="Chintu ⏳",
-                value=2160
+                value='NA'
                 # delta=df['Rohit']) - 10,
             )
         
