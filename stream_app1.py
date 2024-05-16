@@ -228,13 +228,13 @@ if st.button("Update Leaderboard"):
             # fill in those three columns with respective metrics or KPIs
             kpi1.metric(
                 label="Rohit ⏳",
-                value=#
+                value='NA'
                 # delta=df['Rohit']) - 10,
             )
             
             kpi2.metric(
                 label="Mayur ⏳",
-                value=#
+                value='NA'
                 # delta=df['Rohit']) - 10,
             )
             
@@ -246,13 +246,13 @@ if st.button("Update Leaderboard"):
 
             kpi4.metric(
                 label="Kaustubh ⏳",
-                value=#
+                value='NA'
                 # delta=df['Rohit']) - 10,
             )
 
             kpi5.metric(
                 label="Chaitanya ⏳",
-                value=#
+                value='NA'
                 # delta=df['Rohit']) - 10,
             )
 
