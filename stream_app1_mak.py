@@ -173,37 +173,37 @@ if st.button("Update Leaderboard"):
         # fill in those three columns with respective metrics or KPIs
         kpi1.metric(
             label="Rohit ⏳",
-            value=df['Rohit']-840
+            value=df['Rohit'].sum()-840
         # delta=df['Rohit']) - 10,
         )
         
         kpi2.metric(
             label="Ajinkya ⏳",
-            value=df['Ajinkya']-840
+            value=df['Ajinkya'].sum()-840
             # delta=df['Rohit']) - 10,
         )
         
         kpi3.metric(
             label="Aditya ⏳",
-            value=df['Aditya']-840
+            value=df['Aditya'].sum()-840
             # delta=df['Rohit']) - 10,
         )
 
         kpi4.metric(
             label="Kaustubh ⏳",
-            value=df['Kaustubh']-840
+            value=df['Kaustubh'].sum()-840
             # delta=df['Rohit']) - 10,
         )
 
         kpi5.metric(
             label="Chaitanya ⏳",
-            value=df['Chaitanya']-840
+            value=df['Chaitanya'].sum()-840
             # delta=df['Rohit']) - 10,
         )
 
         kpi6.metric(
             label="Sumit ⏳",
-            value=df['Sumit']-840
+            value=df['Sumit'].sum()-840
             # delta=df['Rohit']) - 10,
         )
     st.markdown("### Detailed Data View")
