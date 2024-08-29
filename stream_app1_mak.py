@@ -36,7 +36,7 @@ st.set_page_config(
 #     dwn_url = 'https://drive.google.com/uc?export=download&id=' + file_id
 #     # df = pd.read_csv(dwn_url)
 #     return pd.read_csv(dwn_url)
-dataset_url='https://raw.githubusercontent.com/project10109/InternalD11Dashboard/main/Winnings_csv_Mak.csv'
+dataset_url='https://raw.githubusercontent.com/project10109/InternalD11Dashboard/main/Winnings_csv_Mak_August_final.csv'
 # read csv from a URL
 @st.experimental_memo
 def get_data() -> pd.DataFrame:
