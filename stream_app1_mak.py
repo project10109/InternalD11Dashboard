@@ -38,7 +38,7 @@ st.set_page_config(
 #     return pd.read_csv(dwn_url)
 dataset_url='https://raw.githubusercontent.com/project10109/InternalD11Dashboard/main/Winnings_csv_Mak_August_final.csv'
 # read csv from a URL
-@st.experimental_memo
+@st.cache_data
 def get_data() -> pd.DataFrame:
     return pd.read_csv(dataset_url)
 
